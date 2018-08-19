@@ -1,0 +1,372 @@
+/* Flex Width Breakpoints */
+
+.col.taggle{width:auto;}
+.col.stamp{width:auto;}
+
+@media only screen and (max-width: 570px){
+.col.keys{max-width:100%} 
+.col.record{max-width:100%}
+.col.title{max-width:100%;margin-top:10px}
+:after{max-width:95%;};
+}
+
+@media only screen and (min-width: 570px) and (max-width: 750px){
+.col.keys{width:95%} 
+.col.record{width:100%}
+.col.title{width:auto}
+.col.keys{width:100%;margin-top:4px}
+:after{max-width:95%;};
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1500px){
+.col.keys{width:auto} 
+.col.record{width:100%}
+.col.title{width:auto} 
+body{background-blend-mode:soft-light}
+}
+
+@media only screen and (min-width:1000px) {
+.col.stamp{width:100px; width:8em; 
+border-right: 1px gray solid; margin-right:1em}
+}
+
+@media only screen and (min-width:1500px) {
+.col.keys{width:auto} 
+.col.record{width:100%}
+.col.title{width:auto} 
+body{background-blend-mode:soft-light}
+}
+
+
+/* Simple, responsive, nested grid */
+
+.row .row  {margin:  0 -8px;}
+.col       {padding: 0  8px;}
+.row:after {content:""; clear:both; display:table;}
+
+@media only screen { 
+.col {float:left; width:100%; box-sizing:border-box;}
+}
+
+
+/* Use flexbox to determine width */
+.autowidth{
+display:inline-flex;
+flex-direction:column;
+align-content: stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Universal Styles */
+
+body {
+  line-height: 1.5;
+  font-family:'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .03em;
+  color:lightgray; 
+  font-size:16px;
+  background-image: url('escheresque_ste.png');
+  background-color: #464646;
+}
+
+#container{padding:10px;}
+
+.record {
+  text-decoration:none;
+  background: rgba(0,0,0,.8);
+  border: 1px solid rgba(0, 0, 0, .6);
+  border-radius: 2px;
+  cursor:pointer;
+}
+
+.record:hover {
+  border: 1px solid rgba(250, 167, 48, .8);
+  transition: fade, .3s;
+}
+
+.list *:empty{display:none}
+
+.list {
+  font-family:inherit;
+  font-weight: normal;
+  margin:0; padding:0;
+}
+
+.title{
+  color:rgb(250, 167, 48);
+  position:relative; bottom:2px;
+}
+
+
+.keywords{color:white;}
+
+.card.record{
+  padding-top:11px;
+  padding-bottom:12px
+}
+
+.card{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* iMeta Styles */
+
+.stamp{
+  text-decoration: underline;
+  color: rgba(255,255,255,.5);
+  font-size:13px;
+  position: relative;
+  bottom: -1px;
+}
+
+.time:before{
+  content:" @ "
+}
+
+#iMeta .time{display:none;}
+
+#iMeta input{
+  display:inline-block;
+  width:300px;
+  background-color:transparent;
+  margin: 10px 0 30px 18px;
+  padding: 0 0 0 10px;
+  border:none;
+  border-bottom:1px solid white;
+  outline: none;
+  color:inherit;
+  font-size:18px;
+  font-weight:normal;
+  font-family: 'Open Sans';
+  }
+
+
+::-webkit-input-placeholder {color: white;}
+::-moz-placeholder {color: white}
+::-ms-input-placeholder {color: white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* xMeta Styles */
+#xMeta .list {margin-left:90px}
+
+#xMeta H2{
+  font-size:21px;
+  margin-bottom:7px
+}
+
+#xMeta .date, #xMeta .time{font-size:14px;}
+
+.text-arrow {
+  text-decoration:none;
+  position:absolute;
+  top:28px;
+  left:26px;
+  display:inline-block;
+  font-family:cursive;
+  font-size:30px;
+  padding: 10px;
+  border-radius: 50%;
+  color:rgba(255,255,255,1);
+  color:rgba(0,0,0,1);
+  background-color:rgba(255,255,255,.6);
+}
+
+
+/* xMarks Styles */
+
+#xMarks{padding: 30px 0 0 1px}
+
+#xMarks li {
+  text-align:left; 
+  margin-bottom:10px;
+}
+
+#xMarks a {
+  text-decoration:none;
+  display:block;
+  margin-left: 6px;
+  padding:10px 10px 10px 10px;
+}
+
+#xMarks .title{
+  padding-right:34px;
+}
+
+#xMarks ol{
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#xMarks ol {counter-reset:li;}
+#xMarks ol > li {
+  list-style:none;
+  padding-left:10px;
+}
+
+#xMarks a:after{
+  content: attr(href);
+  display:block;
+  color:darkgray;
+  margin: 0 0 0 0px;
+  max-width: 100%;
+  text-decoration: underline;
+}
+
+
+*{overflow-wrap: break-word;
+  max-width:100%;}
+
+
+/*
+#xMarks .title:before{
+  content:counter(li); 
+  counter-increment:li;
+  margin: 0 8px 0 0;
+  background: rgba(255,255,255,.1);
+  padding:2px 5px 2px 5px;
+  border-radius: 20%;
+  color: rgba(255,255,255,.7);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tags */
+
+.tags{
+  font-size:12px;
+  color:black;
+  background-color:grey;
+  padding:3px 6px 3px 6px;
+  position: relative;
+  bottom: -2px;
+  font-family:'Inconsolata', monospace; letter-spacing: .2em;
+  text-shadow: .1px .1px black;
+}
+
+.tags {background-color: #54A0ED;}
+
+.color[crayon=red] div:last-of-type, .red li a span div:last-of-type {border-bottom: 1px #F65A79 solid;}
+.color[crayon=black] div:last-of-type, .black li a span div:last-of-type {border-bottom: 1px black solid;}
+.color[crayon=yellow] div:last-of-type, .yellow li a span div:last-of-type {border-bottom: 1px #FAD850 solid;}
+.color[crayon=brown] div:last-of-type, .brown li a span div:last-of-type {border-bottom: 1px #B49411 solid;}
+.color[crayon=orange] div:last-of-type, .orange li a span div:last-of-type {border-bottom: 1px #F9804C solid;}
+.color[crayon=green] .tags {background-color: #1FBB1F;}
+.color[crayon=white] .tag {border-bottom: 1px white solid;}
+
+
+
+
+/* Animations */
+
+@keyframes fadeInOpacity {
+  0%{opacity:0;} 100%{opacity:1;}
+}
+
+@keyframes fadeOutOpacity {
+  0%{opacity:1;} 100%{opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+font-family:'Open Sans', sans-serif; letter-spacing: 1px;
+*/
+@font-face {
+  font-family:'Open Sans';
+  src: local('Futura'), local('Segoe UI'), local('Trebuchet MS'), local('Avenir'), 
+  local('Helvetica Neue'), local('Lucida Grande'), local('Ubuntu'), local('Cantarell'), 
+  local('Oxygen-Sans'), local('Roboto'), local('DroidSans'),
+  url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+}
+
+/* 
+font-family:'Inconsolata', monospace; letter-spacing: .2em;
+*/
+@font-face {
+  font-family:'Inconsolata';
+  src: local('SF Mono'), local('Fira Mono'), local('Droid Sans Mono'), local('Source Code Pro'), 
+  local('Consolas'), local('Andale Mono WT'), local('Andale Mono'), local('Lucida Console'), 
+  local('DejaVu Sans Mono'), local('Bitstream Vera Sans Mono'), local('Liberation Mono'), 
+  local('Nimbus Mono L'), local('Monaco'),
+  url(https://fonts.gstatic.com/s/inconsolata/v16/QldKNThLqRwH-OJ1UHjlKGlZ5qg.woff2) format('woff2');
+}
+
+
+/* 
+font-family:'Slabo', serif; letter-spacing: .1em;
+*/
+@font-face {
+  font-family:'Slabo';
+  src: local('Garamond'), local('Apple Garamond'), local('Palatino Linotype'), local('Palatino'), 
+  local('Palladio'), local('URW Palladio L'), local('Book Antiqua'), local('Baskerville'), 
+  local('Bookman Old Style'), local('Bitstream Charter'), local('New Century Schoolbook'), 
+  local('Century Schoolbook'), local('Century Schoolbook L'), 
+  url(https://fonts.gstatic.com/s/slabo27px/v4/mFT0WbgBwKPR_Z4hGN2qgx8D1Q.woff2) format('woff2');
+}
+
+
+/*  
+https://www.giftofspeed.com/css-compressor/  
+https://www.cssfontstack.com/
+*/
