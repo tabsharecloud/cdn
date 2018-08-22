@@ -4,17 +4,16 @@
 .col.stamp{width:auto;}
 
 @media only screen and (max-width: 570px){
-.col.keys{max-width:100%} 
-.col.record{max-width:100%}
-.col.title{max-width:100%;margin-top:10px}
+.col.keys{max-width:98%} 
+.col.record{width:100%}
+.col.title{max-width:98%;margin-top:10px}
 :after{max-width:95%;};
 }
 
 @media only screen and (min-width: 570px) and (max-width: 750px){
-.col.keys{width:95%} 
 .col.record{width:100%}
 .col.title{width:auto}
-.col.keys{width:100%;margin-top:4px}
+.col.keys{width:95%;margin-top:4px}
 :after{max-width:95%;};
 }
 
@@ -55,7 +54,7 @@ display:inline-flex;
 flex-direction:column;
 align-content: stretch;
 box-sizing: border-box;
-max-width:100vw
+width:100vw;
 }
 
 
@@ -82,7 +81,7 @@ body {
   background-image: url('escheresque_ste.png');
   background-color: #464646;
   box-sizing: border-box;
-  max-width:100vw;
+  width:100vw;
 }
 
 #container{padding:10px;}
