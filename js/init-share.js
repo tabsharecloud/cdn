@@ -35,7 +35,7 @@ function loadScript(url){
 };
 
 var iMetaOptions = {
-  valueNames: ['search', 'keywords', 'date', 'time', 'tags',
+  valueNames: ['title', 'keywords', 'date', 'time', 'tags',
   { attr: 'href', name: 'record' }, ],
   item: "<dt class=row><a target=_self class='col card record'>"+
 "<span class='col stamp'><span class=date></span><span class=time>"+
