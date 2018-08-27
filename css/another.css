@@ -12,6 +12,7 @@
 }
 
 @media only screen and (min-width: 570px) and (max-width: 750px){
+.backfloat{display:none}
 .col.record{width:100%}
 .col.title{width:auto}
 .col.keys{width:95%;margin-top:4px}
@@ -137,7 +138,6 @@ body {
 #iMeta input{
   display:inline-block;
   max-width:300px;
-  min-width:90%;
   background-color:transparent;
   margin: 10px 0 30px 18px;
   padding: 0 0 0 10px;
