@@ -20,6 +20,7 @@
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1500px){
+.backfloat{display:flex;position:relative}
 .col.keys{width:auto} 
 .col.record{width:100%}
 .col.title{width:auto} 
@@ -32,6 +33,7 @@ border-right: 1px gray solid; margin-right:1em}
 }
 
 @media only screen and (min-width:1500px) {
+.backfloat{display:flex;position:relative}
 .col.keys{width:auto} 
 .col.record{width:100%}
 .col.title{width:auto} 
@@ -163,9 +165,7 @@ body {
 #xMeta .date, #xMeta .time {font-size:15px;}
 
 .backfloat{
-  position:relative;
   top:10px;margin-right:16px;
-  display:flex;
   border-radius: 50%;
   background-color:gray;
   width:58px; height:58px;
