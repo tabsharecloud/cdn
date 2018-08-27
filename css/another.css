@@ -4,7 +4,7 @@
 .col.stamp{width:auto;}
 
 @media only screen and (max-width: 570px){
-.backfloat{position:fixed;top:24px;right:14px}
+.backfloat{display:none}
 .col.keys{max-width:98%} 
 .col.record{width:100%}
 .col.title{max-width:98%;margin-top:10px}
@@ -12,7 +12,6 @@
 }
 
 @media only screen and (min-width: 570px) and (max-width: 750px){
-.backfloat{position:relative;top:10px;margin-right:16px}
 .col.record{width:100%}
 .col.title{width:auto}
 .col.keys{width:95%;margin-top:4px}
@@ -20,7 +19,6 @@
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1500px){
-.backfloat{position:relative;top:10px;margin-right:16px}
 .col.keys{width:auto} 
 .col.record{width:100%}
 .col.title{width:auto} 
@@ -33,7 +31,6 @@ border-right: 1px gray solid; margin-right:1em}
 }
 
 @media only screen and (min-width:1500px) {
-.backfloat{position:relative;top:10px;margin-right:16px}
 .col.keys{width:auto} 
 .col.record{width:100%}
 .col.title{width:auto} 
@@ -139,7 +136,8 @@ body {
 
 #iMeta input{
   display:inline-block;
-  width:300px;
+  max-width:300px;
+  min-width:90%;
   background-color:transparent;
   margin: 10px 0 30px 18px;
   padding: 0 0 0 10px;
@@ -164,8 +162,9 @@ body {
 #xMeta {margin-left:18px}
 #xMeta .date, #xMeta .time {font-size:15px;}
 
-
-.backfloat {
+.backfloat{
+  position:relative;
+  top:10px;margin-right:16px;
   display:flex;
   border-radius: 50%;
   background-color:gray;
