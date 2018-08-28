@@ -4,7 +4,6 @@
 .col.stamp{width:auto;}
 
 @media only screen and (max-width: 570px){
-#container{width:100%;}
 .backfloat{display:none}
 .col.keys{max-width:98%;margin-top:2px} 
 .col.title{max-width:98%;margin-top:4px}
