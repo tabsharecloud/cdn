@@ -63,8 +63,8 @@ body{background-blend-mode:soft-light}
 /* Use flexbox to determine width */
 .autowidth{
 display:inline-flex; flex-direction:column;
-align-content: stretch; max-width:96vw;
-max-width:100%; box-sizing: content-box;
+align-content: stretch; max-width:95vw;
+box-sizing: content-box;
 }
 
 
